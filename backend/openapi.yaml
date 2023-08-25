@@ -1,0 +1,57 @@
+openapi: "3.0.3"
+
+info:
+  description: API for the Survey Application
+  version: 1.0.0
+  title: Survey Backend
+
+servers:
+  - url: http://localhost:3010
+
+paths:
+  /survey:
+    post:
+      description: Turn in Survey Form
+      requestBody:
+        description: Survey
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/survey'
+      responses:
+        200:
+          description: Survey Received
+        default:
+          description: Unexpected Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/error"
+
+
+components:
+  schemas:
+    error:
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+      additionalProperties: false
+      required:
+        - code
+        - message
+
+    survey:
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      additionalProperties: false
+      required:
+        - email
+        - password
