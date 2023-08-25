@@ -23,4 +23,6 @@ app.use(
   })
 );
 
+app.post('/survey');
+
 export default app;
