@@ -5,4 +5,20 @@
     <title>Honkai Survey</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <body>
+    <h1 id="title">Honkai: Star Rail Survey</h1>
+    <p id="description">Thank you for taking your time to share your opinion</p>
+    <form id="survey-form">
+      <label for="name">
+        Name: <input id="name" name="name" type="text" required />
+      </label>
+      <label for="email">
+        Email: <input id="email" name="email" type="email" required />
+      </label>
+      <label for="months">
+        Months you have played the game: 
+        <input id="number" name="months" type="number" min="0" max="4" required />
+      </label>
+    </form>
+  </body>
 </html>
