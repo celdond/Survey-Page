@@ -1,45 +1,60 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Honkai Survey</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1 id="title">Honkai: Star Rail Survey</h1>
-    <p id="description">Thank you for taking your time to share your opinion</p>
-    <form id="survey-form">
-      <label id="name-label" for="name">
-        Name: <input id="name" name="name" type="text" placeholder="Enter your name here" required />
-      </label>
-      <label id="email-label" for="email">
-        Email: <input id="email" name="email" type="email" placeholder="Enter your email here" required />
-      </label>
-      <label id="number-label" for="months">
-        Months you have played the game: 
-        <input id="number" name="months" type="number" min="0" max="4" placeholder="Months" required />
-      </label>
-        <fieldset>
-          <label for="5"><input id="5" type="radio" name="rank" class="inline" /> 5</label>
-          <label for="4"><input id="4" type="radio" name="rank" class="inline" /> 4</label>
-          <label for="3"><input id="3" type="radio" name="rank" class="inline" /> 3</label>
-          <label for="2"><input id="2" type="radio" name="rank" class="inline" /> 2</label>
-          <label for="1"><input id="1" type="radio" name="rank" class="inline" /> 1</label>
-        </fieldset>
-      <label for="region">What is your favorite region in the game?
-          <select id="dropdown" name="region">
-            <option value="">Select your favorite region</option>
-            <option value="1">Herta Space Station</option>
-            <option value="2">Jarilo-VI</option>
-            <option value="3">Luofu</option>
-            <option value="4">Other</option>
-          </select>
-        </label>
-        <fieldset>
-          <p>What aspects of the game do you enjoy?</p>
-          <label for="Characters"><input type="checkbox" value="Characters" name="Characters" id="Characters"/> Characters</label>
-          <label for="Story"><input type="checkbox" value="Story" name="Story" id="Story"/> Story</label>
-        </fieldset>
-    </form>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Honkai Survey</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1 id="title">Honkai: Star Rail Survey</h1>
+  <p id="description">Thank you for taking your time to share your opinion</p>
+  <form id="survey-form" method="post" action='https://localhost:3010'>
+    <label id="name-label" for="name">
+      Name: <input id="name" name="name" type="text" placeholder="Enter your name here" required />
+    </label>
+    <label id="email-label" for="email">
+      Email: <input id="email" name="email" type="email" placeholder="Enter your email here" required />
+    </label>
+    <label id="number-label" for="months">
+      Months you have played the game:
+      <input id="number" name="months" type="number" min="0" max="4" placeholder="Months" required />
+    </label>
+    <fieldset>
+      <label for="5"><input id="5" type="radio" value="5" name="rank" /> 5</label>
+      <label for="4"><input id="4" type="radio" value="4" name="rank" /> 4</label>
+      <label for="3"><input id="3" type="radio" value="3" name="rank" /> 3</label>
+      <label for="2"><input id="2" type="radio" value="2" name="rank" /> 2</label>
+      <label for="1"><input id="1" type="radio" value="1" name="rank" /> 1</label>
+    </fieldset>
+    <label for="region">What is your favorite region in the game?
+      <select id="dropdown" name="region">
+        <option value="">Select your favorite region</option>
+        <option value="1">Herta Space Station</option>
+        <option value="2">Jarilo-VI</option>
+        <option value="3">Luofu</option>
+        <option value="4">Other</option>
+      </select>
+    </label>
+    <fieldset>
+      <p>What aspects of the game do you enjoy?</p>
+      <label for="Characters"><input type="checkbox" value="Characters" name="Characters" id="Characters" />
+        Characters</label>
+      <label for="Story"><input type="checkbox" value="Story" name="Story" id="Story" /> Story</label>
+      <label for="Gameplay"><input type="checkbox" value="Gameplay" name="Gameplay" id="Gameplay" /> Gameplay</label>
+      <label for="Music"><input type="checkbox" value="Music" name="Music" id="Music" /> Music</label>
+      <label for="Exploration"><input type="checkbox" value="Exploration" name="Exploration" id="Exploration" />
+        Exploration</label>
+      <label for="Management"><input type="checkbox" value="Management" name="Management" id="Management" /> Management
+        Games (Museum, Alley)</label>
+      <label for="Gacha"><input type="checkbox" value="Gacha" name="Gacha" id="Gacha" /> Gacha</label>
+    </fieldset>
+    <label for="comments">Additional Comments:
+      <textarea id="comments" name="comments" rows="3" cols="30"></textarea>
+    </label>
+    <input id="submit" type="submit" value="Submit" />
+  </form>
+</body>
+
 </html>
