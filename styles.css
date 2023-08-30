@@ -4,7 +4,7 @@ body {
     margin: 0;
     background-color: #3a2d28;
     font-family: Times;
-    font-size: 17px;
+    font-size: 18px;
     color: #3a2d28;
 }
 
@@ -20,7 +20,7 @@ body {
 
 fieldset {
     border: none;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 label {
@@ -48,14 +48,18 @@ form {
 }
 
 h1,
-p {
+#description {
     text-align: center;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 input[type="submit"] {
     display: block;
     width: 60%;
-    margin: 1em auto;
+    margin: 1.5rem auto;
     height: 2em;
     font-size: 1.2rem;
     background-color: #d1c7bd;
