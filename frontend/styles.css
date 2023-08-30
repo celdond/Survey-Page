@@ -55,9 +55,13 @@ p {
 input[type="submit"] {
     display: block;
     width: 60%;
-    margin: 0 auto;
+    margin: 1em auto;
     height: 2em;
     font-size: 1.2rem;
     background-color: #D1C7BD;
     min-width: 300px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #3A2D28;
 }
