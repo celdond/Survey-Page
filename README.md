@@ -8,4 +8,4 @@ The survey asks questions about the game *Honkai: Star Rail* by Mihoyo.  This is
 
 ## Viewing the Page
 
-Clone the repository locally and open the html file using a modern, up-to-date browser.
+Clone the repository locally and open the index.html file using a modern, up-to-date browser.
